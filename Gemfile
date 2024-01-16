@@ -1,19 +1,19 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-ruby "3.2.2"
+ruby '3.2.2'
 
-gem "bootsnap", require: false
-gem "jbuilder"
-gem "pg", "~> 1.1"
-gem "puma", ">= 5.0"
-gem "rails", "~> 7.1.2"
-
-gem "redis", ">= 4.0.1"
+gem 'bootsnap', require: false
+gem 'httparty'
+gem 'jbuilder'
+gem 'pg', '~> 1.1'
+gem 'puma', '>= 5.0'
+gem 'rails', '~> 7.1.2'
+gem 'redis', '>= 4.0.1'
 
 group :development, :test do
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'rspec-rails'
   gem 'rubocop', require: false
 end
 
@@ -22,5 +22,6 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'webmock'
 end
 
