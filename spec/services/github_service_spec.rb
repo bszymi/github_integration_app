@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe GithubService do
@@ -23,7 +25,7 @@ RSpec.describe GithubService do
     end
 
     before do
-      stub_request(:post, "https://api.github.com/graphql")
+      stub_request(:post, 'https://api.github.com/graphql')
         .with(
           body: hash_including(query: instance_of(String)),
           headers: {

@@ -12,7 +12,7 @@ RSpec.describe Repository, type: :model do
     let(:user) { create(:user) }
 
     before do
-      create(:repository, user: user, name: "MyString")
+      create(:repository, user: user, name: 'MyString')
     end
 
     it { should validate_presence_of(:name) }
