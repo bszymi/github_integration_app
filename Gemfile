@@ -20,3 +20,7 @@ end
 group :development do
 end
 
+group :test do
+  gem 'shoulda-matchers', '~> 5.0'
+end
+
