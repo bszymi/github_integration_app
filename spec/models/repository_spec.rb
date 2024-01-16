@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Repository, type: :model do
   describe 'associations' do
     it { should belong_to(:user) }
+    it { should have_many(:language_usages) }
   end
 
   describe 'validations' do

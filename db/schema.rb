@@ -10,9 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_16_025132) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_16_030342) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "language_usages", force: :cascade do |t|
+    t.bigint "repository_id", null: false
+    t.string "language_name"
+    t.integer "byte_size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["language_name", "repository_id"], name: "index_language_usages_on_language_name_and_repository_id", unique: true
+    t.index ["repository_id"], name: "index_language_usages_on_repository_id"
+  end
 
   create_table "repositories", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -31,5 +41,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_16_025132) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
+  add_foreign_key "language_usages", "repositories"
   add_foreign_key "repositories", "users"
 end
