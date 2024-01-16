@@ -10,6 +10,7 @@ gem 'puma', '>= 5.0'
 gem 'rails', '~> 7.1.2'
 gem 'redis', '>= 4.0.1'
 gem 'sidekiq'
+gem 'sidekiq-scheduler'
 
 group :development, :test do
   gem 'factory_bot_rails'
