@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :repository do
     user { create(:user) }
-    name { 'MyString' }
+    name { Faker::String.random(length: 5..10) }
     star_count { 1 }
   end
 end
