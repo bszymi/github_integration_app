@@ -1,0 +1,4 @@
+fetch_github_data:
+  cron: "0 * * * *"   # Runs every hour
+  class: FetchGithubDataJob
+  queue: default
