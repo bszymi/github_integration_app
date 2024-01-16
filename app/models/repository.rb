@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Repository < ApplicationRecord
   belongs_to :user
   has_many :language_usages

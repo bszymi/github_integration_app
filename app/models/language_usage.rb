@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LanguageUsage < ApplicationRecord
   belongs_to :repository
 
