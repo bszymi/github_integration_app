@@ -42,5 +42,7 @@ module GithubIntegrationApp
     config.api_only = true
 
     config.autoload_paths += %W(#{config.root}/app/services)
+
+    config.active_job.queue_adapter = :sidekiq
   end
 end
