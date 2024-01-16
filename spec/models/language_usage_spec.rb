@@ -11,7 +11,7 @@ RSpec.describe LanguageUsage, type: :model do
     let(:repository) { create(:repository) }
 
     before do
-      create(:language_usage, repository: repository, language_name: "Ruby")
+      create(:language_usage, repository: repository, language_name: 'Ruby')
     end
 
     it { should validate_presence_of(:language_name) }

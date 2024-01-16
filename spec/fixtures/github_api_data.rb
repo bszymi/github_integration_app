@@ -5,23 +5,23 @@ def github_api_user_data
     user: {
       repositories: [
         {
-          node: {
-            name: 'Repo1',
-            stargazers: {
-              totalCount: 10
+          'node' => {
+            'name' => 'Repo1',
+            'stargazers' => {
+              'totalCount' => 10
             },
-            languages: {
-              edges: [
+            'languages' => {
+              'edges' => [
                 {
-                  size: 12_000,
-                  node: {
-                    name: 'Ruby'
+                  'size' => 12_000,
+                  'node' => {
+                    'name' => 'Ruby'
                   }
                 },
                 {
-                  size: 8000,
-                  node: {
-                    name: 'JavaScript'
+                  'size' => 8000,
+                  'node' => {
+                    'name' => 'JavaScript'
                   }
                 }
               ]
@@ -29,24 +29,23 @@ def github_api_user_data
           }
         },
         {
-          node: {
-            name: 'Repo2',
-            stargazers: {
-              totalCount: 8
+          'node' => {
+            'name' => 'Repo2',
+            'stargazers' => {
+              'totalCount' => 8
             },
-            languages: {
-              edges: [
+            'languages' => {
+              'edges' => [
                 {
-                  size: 15_000,
-                  node: {
-                    name: 'Python'
+                  'size' => 15_000,
+                  'node' => {
+                    'name' => 'Python'
                   }
                 }
               ]
             }
           }
         }
-        # ... more repositories if needed ...
       ]
     }
   }
